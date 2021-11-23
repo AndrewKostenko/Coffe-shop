@@ -1,0 +1,110 @@
+.footer {
+	// .footer_inner
+	&_inner {
+		margin-top: 135px;
+		display: flex;
+		grid-gap: 36px;
+		align-items: center;
+		@media (max-width: 900px) {
+			flex-wrap: wrap;
+		}
+		@media (max-width: 500px) {
+			margin-top: 80px;
+		}
+	}
+	// .footer_logo
+	&_logo {
+		flex: 0 0 72px;
+		img {
+			width: 100%;
+		}
+		@media (max-width: 500px) {
+			display: none;
+		}
+	}
+	// .footer_menu
+	&_menu {
+		flex: 1 1 50%;
+		display: flex;
+		align-items: center;
+		grid-gap: 15px 43px;
+		flex-wrap: wrap;
+		a {
+			font-family: Inter;
+			font-size: 18px;
+			line-height: 22 / 18 * 100%;
+			color: white;
+			transition: 300ms;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $yellow;
+				}
+			}
+		}
+	}
+	// .footer_form
+	&_form {
+		display: flex;
+		align-items: center;
+		padding: 12px;
+		background: #1c1814;
+		border-radius: 36px;
+
+		width: 328px;
+		@media (max-width: 900px) {
+			flex: 1 1 100%;
+		}
+	}
+	// .footer_input
+	&_input {
+		flex: 1 1 auto;
+
+		height: 48px;
+		width: 100%;
+		padding: 0 16px;
+
+		background: transparent;
+
+		font-family: Urbanist;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 29 / 16 * 100%;
+		color: white;
+		&::placeholder {
+			color: rgba($color: white, $alpha: 0.5);
+		}
+	}
+	// .footer_button
+	&_button {
+		flex: 0 0 48px;
+		button {
+			cursor: pointer;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 48px;
+			height: 48px;
+
+			border-radius: 50%;
+			background: $yellow;
+		}
+	}
+	// .footer_bottom
+	&_bottom {
+		margin-top: 72px;
+		padding: 33px 0;
+		text-align: center;
+
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 25 / 14 * 100%;
+		color: white;
+
+		background: #1c1814;
+		@media (max-width: 600px) {
+			padding: 24px 0;
+			margin-top: 50px;
+		}
+	}
+}
